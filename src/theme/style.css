@@ -90,8 +90,8 @@ html {
 /* ============ NAVBAR STYLE ============== */
 .navbar {
     background-color: var(--theme-bg-color);
-    max-width: 1250px;
-    max-height: 860px;
+    max-width: 100%;
+    max-height: 100%;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -225,4 +225,74 @@ html {
     color: var(--inactive-color);
     font-size: 15px;
     font-weight: 500;
+}
+
+.header-profile {
+    display: flex;
+    align-items: center;
+    padding: 0 16px 0 40px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.header-profile svg {
+    width: 22px;
+    color: #f9fafb;
+    flex-shrink: 0;
+}
+
+.notification {
+    position: relative;
+}
+
+.notification-number {
+    position: absolute;
+    background-color: #3a6df0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    right: -6px;
+    top: -6px;
+}
+
+.notification + svg {
+    margin-left: 22px;
+}
+
+@media screen and (max-width: 945px) {
+    .notification + svg {
+        display: none;
+    }
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 2px solid var(--theme-color);
+    margin-left: 22px;
+}
+
+.wide .header-menu,
+.wide .header-profile {
+    display: none;
+}
+
+.wide .search-bar {
+    max-width: 600px;
+    margin: auto;
+    transition: 0.4s;
+    box-shadow: 0 0 0 1px var(--border-color);
+    padding-left: 0;
+}
+
+.wide .menu-circle {
+    margin-right: 0;
 }
